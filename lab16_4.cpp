@@ -1,6 +1,7 @@
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
+#include <algorithm>    
 using namespace std;
 
 void shuffle(int &,int &,int &,int &);
@@ -16,4 +17,17 @@ int main(){
 	}
 	
 	return 0;
+}
+
+void shuffle(int &a,int &b,int &c,int &d){
+	int *A = &a;
+	int *B = &b;
+	int *C = &c;
+	int *D = &d;
+
+	int x = *A;
+	*A = *B;
+	*B = *C;
+	*C = *D;
+	*D = x;
 }
